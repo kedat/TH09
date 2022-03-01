@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Outfit:wght@100;200;300;400;500;600&family=Ribeye+Marrow&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+img{
+  width: 450px;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-image: linear-gradient(
+    90deg,
+    #f12711 0%,
+    #090979 35%,
+    #00d4ff 100%
+  );
+}
+
+.menu {
+  display: flex;
+}
+
+.menu-item {
+  list-style-type: none;
+  margin-left: 35px;
+}
+
+.menu li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.header .menu-item:hover a,
+.logo {
+  color: bisque;
+}
+
+.header a {
+  font-size: 22px;
+  text-decoration: none;
+}
+
+/* SUBNAV */
+.subnav {
+  position: absolute;
+  padding: 0;
+  top: 40px;
+  right: -24px;
+  background-color: #fff;
+  display: none;
+  width: 162px;
+}
+
+.subnav li {
+  font-size: 18px;
+  padding: 8px;
+}
+
+.subnav li:hover {
+  background-color: rgb(211, 182, 182);
+}
+
+.menu-item:last-child {
+  position: relative;
+}
+
+.fa-chevron-down {
+  font-size: smaller;
+  margin-left: 2px;
+}
+
+.menu-item:last-child:hover .subnav {
+  display: block;
+}
+/* SLIDEBAR */
+
+.slidebar {
+  background-image: url(../img/unsplash_Ww8eQWjMJWk.jpg);
+  object-fit: cover;
+  background-size: cover;
+  padding: 40px 0 60px 70px;
+}
+
+.container p:first-child {
+  font-family: "Dancing Script", cursive;
+  font-size: 210%;
+  margin-bottom: 20px;
+}
+
+.banner {
+  position: relative;
+}
+
+.ad {
+  font-size: 48px;
+  font-family: "Ribeye Marrow", cursive;
+  margin-bottom: 20px;
+}
+
+.e3 {
+  font-family: "Ribeye Marrow", cursive;
+  position: absolute;
+  top: 25%;
+  font-size: 70px;
+  left: 400px;
+}
+
+.slidebar button {
+  padding: 10px;
+  font-size: 20px;
+  display: inline-block;
+  margin-bottom: 50px;
+  background-color: #fffb00;
+  margin-top: 40px;
+}
+
+.slidebar button:hover{
+  background-color: #08b9ff;
+  cursor: pointer;
+}
+/* CHOOSE */
+.choose, .upcoming {
+  text-align: center;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.choose p, .upcoming p{
+  font-size: 20px;
+}
+
+.card-list{
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.card-body button {
+  padding: 10px;
+  font-size: 20px;
+  display: inline-block;
+  margin-bottom: 30px;
+  background-color: #fffb00;
+  margin-top: 10px;
+}
+
+.card-body button:hover{
+  background-color: #08b9ff;
+  cursor: pointer;
+}
+
+.fa-mobile-alt,
+.fa-globe {
+  margin-right: 5px;
+}
+
+.slide {
+  margin: 0px 5%;
+}
+
+/* .images {
+  display: grid;
+  grid-template-areas:
+    "row1 row2"
+    "row1 row3";
+}
+.row1 {
+  grid-area: row1;
+}
+
+.row2 {
+  grid-area: row2;
+}
+.row1 {
+  grid-area: row3;
+} */
+
+.inp {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0px 15em;
+  gap: 1em;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.inp input {
+  padding: 5px;
+}
+
+.inp button {
+  background-color: yellow;
+}
+
+.inp button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 0, 0.733);
+}
+
+.footer {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-image: linear-gradient(
+    90deg,
+    #020024 0%,
+    #090979 35%,
+    #00d4ff 100%
+  );
+  color: #fff;
+}
+
+.footer p {
+  font-size: 1.2rem;
+}
+
+.footer .social {
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 1200px) {
+  .e3 {
+    display: none;
+  }
+  .btn-warning {
+    margin-top: -8rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .right,
+  .order {
+    display: none;
+  }
+  .btn-warning {
+    margin-top: -5rem;
+  }
+
+  .inp {
+    margin: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .banner {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container .dw {
+    display: none;
+  }
+  .card-grou {
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+  }
+
+  .inp {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .dw {
+    margin-right: 0;
+  }
+
+  .btn-warning {
+    font-size: 1rem;
+    margin-top: -11rem;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+}
